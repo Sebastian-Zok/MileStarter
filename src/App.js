@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Web3 from 'web3'
 import './global.css'
 import Header from './Header'
+import ProductCarousel from './ProductCarousel'
+import PledgeOptions from './PledgeOptions'
+import VetoSection from './VetoSection'
 
 class App extends Component {
   componentWillMount() {
@@ -30,7 +33,12 @@ class App extends Component {
       <div>
         <Header setStateOfAccounts={this.setStateOfAccounts}></Header>
         <div className="container">
-          <p>Your address: {this.state.account}</p>
+        <ProductCarousel></ProductCarousel>
+        <PledgeOptions></PledgeOptions>
+        <VetoSection></VetoSection> 
+        <br/>
+        <p>Your address: {this.state.account}</p>
+        <p>Creator address: {this.state.account}</p>
         </div>
       </div>
     );
