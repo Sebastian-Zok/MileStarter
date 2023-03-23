@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Web3 from 'web3'
-import './global.css'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './assets/Logo.png';

@@ -10,25 +10,24 @@ class VetoSection extends Component {
 
     constructor(props) {
         super(props)
-     }
+    }
 
     render() {
         return (
             <div>
-               <br/>
+                <br />
                 <h3>Veto Count</h3>
-                <ProgressBar variant="danger" now={60}  />
-                <br/>
-          
-                        <Card  >
-                            <Card.Body>
-                                <Card.Title>Please Refund</Card.Title>
-                                <Card.Text>
-                                    If 50% of the pledgers decide to veto, you will get 0.5 ETH back.                                </Card.Text>
-                                <Button variant="danger">VETO</Button>
-                            </Card.Body>
-                        </Card>
-   
+                <ProgressBar variant="danger" now={60} />
+                <br />
+                <Card  >
+                    <Card.Body>
+                        <Card.Title>DAO-Refund</Card.Title>
+                        <Card.Text>
+                            If 50% of the pledgers decide to veto, you will get 0.5 ETH back.                                </Card.Text>
+                        <Button variant="danger">VETO</Button>
+                    </Card.Body>
+                </Card>
+
             </div >
         );
     }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Web3 from 'web3'
-import './global.css'
 import Header from './Header'
 import ProductCarousel from './ProductCarousel'
 import PledgeOptions from './PledgeOptions'

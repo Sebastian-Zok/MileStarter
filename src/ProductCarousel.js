@@ -53,13 +53,13 @@ class ProductCarousel extends Component {
                 </Carousel>
                 <br />
                 <h1>Experience SNORXEL©</h1>
-                <p>Looking to explore the depths of the ocean without feeling like a fish out of water? Look no further than SNORXEL, the underwater breath mask that'll have you swimming like a pro in no time!
+                <p>Looking to explore the depths of the ocean without feeling like a fish out of water? Look no further than SNORXEL, the underwater breath mask that'll have you swimming like a pro fish in no time!
                     <br /><br />
                     With SNORXEL, you'll be able to breathe easy and explore the underwater world without worrying about pesky things like, you know, drowning. Say goodbye to bulky tanks and hello to sleek, stylish design that'll have all the other fishies jealous.
                     <br /><br />
                     And don't worry about looking like a dork in front of your scuba diving buddies – SNORXEL is the coolest kid on the block. With its bold colors and cutting-edge technology, you'll be the envy of the underwater community.
                     <br /><br />
-                    So what are you waiting for? Dive into adventure with SNORXEL today!</p>
+                    So what are you waiting for? Dive into the adventure with SNORXEL today!</p>
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Roadmap #1</Accordion.Header>
@@ -70,7 +70,7 @@ class ProductCarousel extends Component {
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>Roadmap #2</Accordion.Header>
                         <Accordion.Body>
-                            We continue to provide you with updates on our development and start to deliver our first protoypes to customers. If you are unhappy with the development you have one year to use your DAO-Token to vote for a veto. If 50% of the pledgers decide to veto, you will get 0.5 ETH refunded and will not receive your SNORXEL. You may also endanger the others who have not decided to veto to get their SNORXEL. So decide wisely!
+                            We continue to provide you with updates on our development and start to deliver first protoypes to customers. If you are unhappy with the development you have one year to use your DAO-Token to vote for a veto. If 50% of the pledgers decide to veto, you will get 0.5 ETH refunded and will not receive your SNORXEL anymore. You may also endanger that others who have not decided to veto to get their SNORXEL, so decide wisely!
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
