@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# What is this about?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app fundamentally demonstrates how a decentralized crowdfunding platform can be implemented through a Web3 Tech-Stack. The backend is based on a smart contract, which means that no middleman is needed. While normal crowdfunding platforms charge around 5% commission and an additional 2% is incurred by the payment service providers, with this dApp setup there will only be the gas fees that need to be paid. The well-known crowdfunding -platforms normally do not help when there are scams, so the classic argument ''we want trust through control'' does not count.
 
-## Available Scripts
+In addition, there is the possibility of vetoing the funding as a supporter, whereby a part of the pledged amount can be refunded. Thus, users can limit their damage in case of a scam.
 
-In the project directory, you can run:
+## Prerequisites:
 
-### `npm start`
+- Install Node.js
+- Install Ganache
+- Install Truffle
+- Install a Web3 Browser or the Web3-Plugin
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Step 1: Ganache Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Inside of Ganache you need to create a new Ethereum Workspace.
 
-### `npm test`
+### Step 2: Web3 Browser Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Connect your Web3 Browser to the Ethereum Blockchain that is hosted by your Ganache instance.
+After that, you can add the account addresses that are provided by Ganache to your wallet inside the Web3-Browser.
 
-### `npm run build`
+### Step 3: Website Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inside the root directory of this project, enter `npm i`.
+After the download is completed, enter `npm start`. Open the link that is provided in the CLI inside your Web3-Browser, you are now on the MileStarter Webpage.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Step 4: Truffle Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Also inside the root directory, enter `truffle compile`. After the compilation, enter `truffle migrate` to migrate the compiled Smart Contract to the Ethereum Blockchain. Inside the CLI you find an entry that says contract address. Copy that address and paste it into the variable contract address inside the App.js file.
 
-### `npm run eject`
+### Step 5: Done!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can now interact with the dApp. Switch to different accounts to test all the functionalities, that are described within the App.
