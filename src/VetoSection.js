@@ -31,6 +31,7 @@ class VetoSection extends Component {
     async getVeto(contract) {
         await contract.methods.getIsVeto().call()
             .then((res) => this.setState({ isVeto: res }));
+        console.log(this.state.isVeto);
     }
 
     async getTotalBackers(contract) {
@@ -58,9 +59,6 @@ class VetoSection extends Component {
     }
 
     render() {
-
-
-
         return (
             <div>
                 {this.state.isVeto ?
@@ -72,7 +70,6 @@ class VetoSection extends Component {
                             <Button variant="danger" onClick={() => this.veto(this.props.contract, this.props.account)} disabled={this.isVetoBacker()}>VETO</Button>
                         </Card.Body>
                     </Card></> : <div></div>}
-
             </div >
         );
     }

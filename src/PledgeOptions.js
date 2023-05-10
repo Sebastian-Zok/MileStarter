@@ -23,6 +23,22 @@ class PledgeOptions extends Component {
         this.getBackers(this.props.contract)
     }
 
+    async getRaised(contract) {
+        await contract.methods.getPledged().call()
+            .then((res) => this.setState({ raised: res }));
+        console.log(this.state.raised);
+    }
+
+    async getBackers(contract) {
+        await contract.methods.getBackers().call().then(
+            (backers) => {
+                contract.methods.getEarlyBirdBackers().call().then((earlyBirdBackers) =>
+                    this.setState({ backers: backers.concat(earlyBirdBackers) })
+                )
+            }
+        )
+    }
+
     async pledge(contract, account) {
         try {
             await contract.methods.pledge().send({ from: account, value: web3.utils.toWei("1.5", "ether") })
@@ -54,21 +70,6 @@ class PledgeOptions extends Component {
         return input.match(/(?<=revert )([^\\]+)/)[0]
     }
 
-    async getRaised(contract) {
-        await contract.methods.getPledged().call()
-            .then((res) => this.setState({ raised: res }));
-    }
-
-    async getBackers(contract) {
-        await contract.methods.getBackers().call().then(
-            (backers) => {
-                contract.methods.getEarlyBirdBackers().call().then((earlyBirdBackers) =>
-                    this.setState({ backers: backers.concat(earlyBirdBackers) })
-                )
-            }
-        )
-    }
-
     isBacker() {
         return this.state.backers.find(element => element === this.props.account) != undefined ? true : false;
     }
@@ -86,7 +87,6 @@ class PledgeOptions extends Component {
         }
 
 
-        console.log(this.state.backers);
         return (
             <div>
                 {<h3>Raised Amount: {/* {raisedAmount} of {goal} */} ETH</h3>}
@@ -114,6 +114,7 @@ class PledgeOptions extends Component {
                             </Card.Body>
                         </Card></Col>
                 </Row>
+
             </div >
         );
     }

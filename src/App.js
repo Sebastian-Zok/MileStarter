@@ -9,7 +9,7 @@ const { abi } = require('./MileStarter.json')
 
 class App extends Component {
 
-  contractAddress = '0xD35270E931E7B0877A340f1F2689e8aAdc9f4f33';
+  contractAddress = '0xe2fb8E29E4adF6a6faA43c5E3c3C9511eec7BA43';
 
   componentWillMount() {
     this.loadBlockchainData()
@@ -64,7 +64,7 @@ class App extends Component {
           <div className="container">
             <ProductCarousel></ProductCarousel>
             <PledgeOptions account={this.state.account} contract={this.state.contract} campaign={this.state.campaign}></PledgeOptions>
-            <VetoSection></VetoSection>
+            <VetoSection account={this.state.account} contract={this.state.contract}></VetoSection>
             <br />
           </div>
         </div>

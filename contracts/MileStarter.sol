@@ -60,8 +60,6 @@ contract MileStarter {
         earlyBirdBackersCount++;
 
         emit Pledge(msg.sender, msg.value, block.timestamp);
-
-        checkIfFundingDone();
     }
 
     function veto() external payable {
@@ -125,16 +123,23 @@ contract MileStarter {
         delete backersIndex;
         delete earlyBirdBackersIndex;
         earlyBirdBackersCount = 0;
+        isVeto = false;
 
         campaign.creator = payable(
             address(0x0000000000000000000000000000000000000000)
         );
     }
 
-    function checkIfFundingDone() public {
+    function checkIfFundingIsDone() public {
+        require(
+            campaign.creator == msg.sender,
+            "Not Authorized to cancel campaign"
+        );
+        require(isVeto, "Already claimed");
+
         if (address(this).balance >= campaign.goal) {
-            campaign.creator.transfer(address(this).balance / 2);
             isVeto = true;
+            campaign.creator.transfer(address(this).balance / 2);
         } else if (block.timestamp > campaign.endAt) {
             for (uint i = 0; i < earlyBirdBackersIndex.length; i++) {
                 earlyBirdBackersIndex[i].transfer(1000000000000000000);

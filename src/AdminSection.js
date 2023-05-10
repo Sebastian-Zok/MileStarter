@@ -62,6 +62,19 @@ class AdminSection extends Component {
         window.location.reload(false);
     }
 
+
+    async claimAfterVeto(contract) {
+        await contract.methods.claimAfterVeto().send({ from: this.props.account })
+            .then(console.log);
+        window.location.reload(false);
+    }
+
+    async claimAfterFund(contract) {
+        await contract.methods.checkIfFundingIsDone().send({ from: this.props.account })
+            .then(console.log);
+        window.location.reload(false);
+    }
+
     render() {
 
         let endDate = new Date(Number(this.props.campaign[2]) * 1000)
@@ -111,7 +124,8 @@ class AdminSection extends Component {
                             {this.state.vetoBackers.map((add) => <ListGroup.Item>{add} </ListGroup.Item>)}
                         </ListGroup></>
                             : <div></div>}
-
+                        <Button variant="primary" onClick={() => this.claimAfterFund(this.props.contract)} >Claim After Fundraise is over</Button>
+                        <br></br>  <br></br>
                         <Button variant="primary" onClick={() => this.claimAfterVeto(this.props.contract)} >Claim After Veto Time is Over</Button>
                         <br></br>                        <br></br>
 
