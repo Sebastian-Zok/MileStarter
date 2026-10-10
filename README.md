@@ -1,6 +1,6 @@
 # What is this about?
 
-The app fundamentally demonstrates how a decentralized crowdfunding platform can be implemented through a Web3 Tech-Stack. The backend is based on a smart contract, which means that no middleman is needed. While normal crowdfunding platforms charge around 5% commission and an additional 2% is incurred by the payment service providers, with this dApp setup there will only be the gas fees that need to be paid. The well-known crowdfunding -platforms normally do not help when there are scams, so the classic argument ''we want trust through control'' does not count.
+The app fundamentally demonstrates how a decentralized crowdfunding platform could be implemented through a Web3 Tech-Stack. It is not production ready and only a small demonstration for the concept of a Smart Contract, which the backend is based on. A smart contract means that no middleman is needed and everything is hosted on the blockchain. While normal crowdfunding platforms charge around 5% commission and an additional 2% is incurred by the payment service providers, with this dApp setup there will only be the gas fees that need to be paid. The well-known crowdfunding -platforms normally do not help when there are scams, so the classic argument ''we want trust through control'' does not count.
 
 In addition, there is the possibility of vetoing the funding as a supporter, whereby a part of the pledged amount can be refunded. Thus, users can limit their damage in case of a scam.
 
